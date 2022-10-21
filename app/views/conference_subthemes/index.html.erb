@@ -15,7 +15,7 @@
     <% @conference_subthemes.each do |conference_subtheme| %>
       <tr>
         <td><%= conference_subtheme.name %></td>
-        <td><%= conference_subtheme.conference_theme_id %></td>
+        <td><%= conference_subtheme.conference_theme.name %></td>
         <td><%= link_to 'Show', conference_subtheme %></td>
         <td><%= link_to 'Edit', edit_conference_subtheme_path(conference_subtheme) %></td>
         <td><%= link_to 'Destroy', conference_subtheme, method: :delete, data: { confirm: 'Are you sure?' } %></td>

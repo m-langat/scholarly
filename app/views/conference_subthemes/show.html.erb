@@ -7,7 +7,7 @@
 
 <p>
   <strong>Conference theme:</strong>
-  <%= @conference_subtheme.conference_theme_id %>
+  <%= @conference_subtheme.conference_theme.name%>
 </p>
 
 <%= link_to 'Edit', edit_conference_subtheme_path(@conference_subtheme) %> |

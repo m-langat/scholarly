@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :conference_theme_id %>
-    <%= form.text_field :conference_theme_id %>
+    <%= form.select :conference_theme_id, options_from_collection_for_select(ConferenceTheme.all, 'id', 'name') %>
   </div>
 
   <div class="actions">
