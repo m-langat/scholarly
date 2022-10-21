@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @paper.title %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @paper.theme_id %>
+</p>
+
+<p>
+  <strong>Subtheme:</strong>
+  <%= @paper.subtheme_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @paper.content %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @paper.status %>
+</p>
+
+<%= link_to 'Edit', edit_paper_path(@paper) %> |
+<%= link_to 'Back', papers_path %>

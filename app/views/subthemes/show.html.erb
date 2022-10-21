@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @subtheme.name %>
+</p>
+
+<p>
+  <strong>Belongs to:</strong>
+  <%= @subtheme.belongs_to %>
+</p>
+
+<%= link_to 'Edit', edit_subtheme_path(@subtheme) %> |
+<%= link_to 'Back', subthemes_path %>

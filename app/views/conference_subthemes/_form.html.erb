@@ -1,0 +1,27 @@
+<%= form_with(model: conference_subtheme) do |form| %>
+  <% if conference_subtheme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conference_subtheme.errors.count, "error") %> prohibited this conference_subtheme from being saved:</h2>
+
+      <ul>
+        <% conference_subtheme.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conference_theme_id %>
+    <%= form.text_field :conference_theme_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class ConferenceTheme < ApplicationRecord
+end

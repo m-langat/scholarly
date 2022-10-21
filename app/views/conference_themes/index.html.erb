@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conference Themes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conference_themes.each do |conference_theme| %>
+      <tr>
+        <td><%= conference_theme.name %></td>
+        <td><%= link_to 'Show', conference_theme %></td>
+        <td><%= link_to 'Edit', edit_conference_theme_path(conference_theme) %></td>
+        <td><%= link_to 'Destroy', conference_theme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conference Theme', new_conference_theme_path %>
