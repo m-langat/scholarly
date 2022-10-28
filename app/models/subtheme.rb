@@ -1,2 +1,0 @@
-class Subtheme < ApplicationRecord
-end
