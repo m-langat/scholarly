@@ -1,6 +1,4 @@
 class Paper < ApplicationRecord
-  belongs_to :theme
-  belongs_to :subtheme
-
-  has_many :conference_theme
+ belongs_to :conference_theme
+ belongs_to :conference_subtheme
 end

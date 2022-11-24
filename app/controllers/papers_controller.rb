@@ -57,6 +57,15 @@ class PapersController < ApplicationController
     end
   end
 
+  def conference_subthemes
+    @target = params[:target]
+    @conference_subthemes = ConferenceTheme.find(params(:conference_theme))
+
+    respond_to do |format|
+      format.turbo_stream 
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_paper
