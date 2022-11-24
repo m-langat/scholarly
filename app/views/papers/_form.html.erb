@@ -15,18 +15,18 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-  <div data-controller="subthemes" data-select-url-value="<%= conference_subthemes_papers_path %>" data-select-param-values="conference_theme_id" >
-  <div class="field" >
-    <%= form.label :conference_theme_id %>
-    <%= form.select :conference_theme_id, options_from_collection_for_select(ConferenceTheme.all, 'id', 'name'), {prompt: "Select a theme"}, {class: 'form-select', data: {ation: "change->select#change"}}%>
-  </div>
+  <div data-controller="subthemes" >
+    <div class="field" >
+      <%= form.label :conference_theme_id %>
+      <%= form.select :conference_theme_id, options_from_collection_for_select(ConferenceTheme.all, 'id', 'name'), {prompt: "Select a theme"}, {class: 'form-select', data: {action: "change->subthemes#change"}}%>
+    </div>
 
-  <div class="field">
-    <%= form.label :conference_subtheme_id %>
-    <%= form.select :conference_subtheme_id, (form.object.conference_theme_id? ? ConferenceTheme.find(form.object.conference_theme_id) : []), {}, { id: nil, class: 'form-select', data: { select_target: "select" } }%>
-  </div>
+    <div class="field">
+      <%= form.label :conference_subtheme_id %>
+      <%= form.select :conference_subtheme_id, (form.object.conference_theme_id? ? debug(ConferenceTheme.find(form.object.conference_theme_id)) : []), {}, { class: 'form-select', data: { subthemes_target: "select" } }%>
+    </div>
 
-</div>
+  </div>
   
   <div class="field">
     <%= form.label :content %>

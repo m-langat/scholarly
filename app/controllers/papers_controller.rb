@@ -59,10 +59,12 @@ class PapersController < ApplicationController
 
   def conference_subthemes
     @target = params[:target]
-    @conference_subthemes = ConferenceTheme.find(params(:conference_theme))
+    @conference_theme = ConferenceTheme.find(params[:conference_theme_id])
+    @conference_subthemes = ConferenceSubtheme.where(conference_theme: @conference_theme)
 
     respond_to do |format|
-      format.turbo_stream 
+      format.turbo_stream
+      format.json {head :no_content}
     end
   end
 
