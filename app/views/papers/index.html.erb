@@ -18,9 +18,8 @@
     <% @papers.each do |paper| %>
       <tr>
         <td><%= paper.title %></td>
-        <td><%= paper.theme_id %></td>
-        <td><%= paper.subtheme_id %></td>
-        <td><%= paper.content %></td>
+        <td><%= paper.conference_theme.name %></td>
+        <td><%= paper.conference_subtheme.name %></td>
         <td><%= paper.status %></td>
         <td><%= link_to 'Show', paper %></td>
         <td><%= link_to 'Edit', edit_paper_path(paper) %></td>

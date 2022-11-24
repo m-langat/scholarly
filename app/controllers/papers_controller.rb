@@ -76,6 +76,6 @@ class PapersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def paper_params
-      params.require(:paper).permit(:title, :theme_id, :subtheme_id, :content, :status)
+      params.require(:paper).permit(:title, :conference_theme_id, :conference_subtheme_id, :content, :status)
     end
 end
