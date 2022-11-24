@@ -5,5 +5,29 @@
   <%= @conference_theme.name %>
 </p>
 
+<h1>Subthemes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"> Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conference_subthemes.each do |conference_subtheme| %>
+      <tr>
+        <td><%= conference_subtheme.name %></td>
+        <td><%= link_to 'Show', conference_subtheme %></td>
+        <td><%= link_to 'Edit', edit_conference_subtheme_path(conference_subtheme) %></td>
+        <td><%= link_to 'Destroy', conference_subtheme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
 <%= link_to 'Edit', edit_conference_theme_path(@conference_theme) %> |
 <%= link_to 'Back', conference_themes_path %>

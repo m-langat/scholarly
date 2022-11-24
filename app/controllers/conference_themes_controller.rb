@@ -8,6 +8,7 @@ class ConferenceThemesController < ApplicationController
 
   # GET /conference_themes/1 or /conference_themes/1.json
   def show
+    @conference_subthemes = @conference_theme.conference_subtheme
   end
 
   # GET /conference_themes/new
