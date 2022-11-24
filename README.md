@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
 # scholarly
->>>>>>> f736228 (Initial commit)
+
+A scientific paper and journal review app for International Cancer Insitute AnCHOR Conference.
+
+Coming soon
+* Indepth description
+* system specification
+* Database
+* Installation
+* Guide
