@@ -26,6 +26,7 @@ gem 'redis', '~> 4.0'
 gem 'importmap-rails'
 gem 'requestjs-rails'
 gem 'turbo-rails'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

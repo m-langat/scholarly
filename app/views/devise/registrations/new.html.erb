@@ -1,0 +1,65 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.select :gender, options_for_select([['Male', 'male'], ['Female', 'female']]), autofocus: true, autocomplete: "gender" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone, autofocus: true, autocomplete: "phone" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :place_of_work %><br />
+    <%= f.text_field :place_of_work, autofocus: true, autocomplete: "place of work" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role_in_facility %><br />
+    <%= f.text_field :role_in_facility, autofocus: true, autocomplete: "role in facility" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country, autofocus: true, autocomplete: "country" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :regulatory_body %><br />
+    <%= f.select :regulatory_body, options_for_select([['KMPDC', 'KMPDC'], ['NCK', 'NCK'],['KPPB', 'KPPB'], ['COC', 'COC'], ['Other', 'other'] ]), autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
