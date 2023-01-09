@@ -1,8 +1,18 @@
 <h1>Welcome to Scholarly</h1>
-
 <p>Submit and check the status of your submitted abstracts</p>
+
+<% if user_signed_in? %>
+
 
 <h4>links</h4>
 <%= link_to "Papers",papers_path %> |
 <%= link_to "Conference Themes", conference_themes_path %> |
-<%= link_to "Conference Subthemes",conference_subthemes_path %> |
+<%= link_to "Conference Subthemes",conference_subthemes_path %> | 
+<%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+
+<% else %>
+
+<%= link_to "create account", new_user_registration_path %>
+<%= link_to "Log in", new_user_session_path%>
+
+<% end %>
